@@ -1,0 +1,20 @@
+/* ===== NAV BAR STYLING ===== */
+
+.navbar {
+    border-bottom: 1px solid rgb(41, 41, 41);
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    
+    
+}
+.navbar ul li{
+    display: inline-block;
+    justify-items: center;
+    font-size: 20px;
+    margin: 2px 50px;
+    color: black;
+}
+
+
+

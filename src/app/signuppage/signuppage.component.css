@@ -1,0 +1,41 @@
+.formbox {
+    display: inline-block;
+    
+    width: 500px;
+}
+.formbox h1 {
+   text-align: center;
+}
+.container {
+    
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+.labelboxes {
+    
+    padding: 10px;
+}
+.labelboxes input {
+    height: 40px;
+    width: 100%;
+    padding: 15px 8px;
+}
+.submitbox {
+    padding: 10px;
+    
+    font-size: 20px;
+    width: 200px;
+}
+.submitboxmain {
+    display: flex;
+    justify-content: center;
+}
+.invalid-feedback {
+   
+    height: 30px;
+    align-items: center;
+    padding: 0 10px;
+    display: flex;
+    
+}

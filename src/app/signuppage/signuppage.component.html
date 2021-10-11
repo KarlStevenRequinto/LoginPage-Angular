@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="formbox">
+      <h1>Please Signup</h1>
+      <form [formGroup]="userForm">
+
+          <div class="labelboxes">
+            <label for="name">First Name</label><br>
+            <input type="text" name="firstname" formControlName="firstname">
+            <div class="invalid-feedback">
+                <div>
+                    <p *ngIf ="!userForm.get('firstname')?.valid && userForm.get('firstname')?.touched">First Name is invalid</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="labelboxes">
+            <label for="name">Last Name</label><br>
+            <input type="text" name="lastname" formControlName="lastname">
+            <div class="invalid-feedback">
+                <div>
+                    <p *ngIf ="!userForm.get('lastname')?.valid && userForm.get('lastname')?.touched">Last Name is invalid</p>
+                </div>
+            </div>
+          </div>
+          
+          <div class="labelboxes">
+            <label for="address">Home Address</label><br>
+            <input type="text" name="homeaddress"  formControlName="homeaddress">
+            <div class="invalid-feedback">
+                <p *ngIf ="!userForm.get('homeaddress')?.valid && userForm.get('homeaddress')?.touched">Address is invalid</p>
+            </div>
+          </div>
+
+          <div class="labelboxes">
+            <label for="address">Email Address</label><br>
+            <input type="email" name="emailaddress"  formControlName="emailaddress">
+            <div class="invalid-feedback">
+                <p *ngIf ="!userForm.get('emailaddress')?.valid && userForm.get('emailaddress')?.touched">Email must be a valid email address</p>
+            </div>
+          </div>
+
+          <div class="labelboxes">
+            <label for="password">Password</label><br>
+            <input type="password" name="password" formControlName="password">
+            <div class="invalid-feedback">
+                <p *ngIf ="!userForm.get('password')?.valid && userForm.get('password')?.touched">Password is invalid</p>
+            </div>
+          </div>
+
+          <div class="labelboxes">
+            <label for="repeatpassword">Repeat Password</label><br>
+            <input type="password" name="repeatPassword"  formControlName="repeatPassword">
+          </div>
+
+          <div class="submitboxmain">
+            <input class= "submitbox" type="submit" value="Register" [disabled]="!userForm.valid" (click)="submitbtn()">
+          </div>
+        </form>
+    </div>
+</div>
